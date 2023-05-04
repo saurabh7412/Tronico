@@ -1,0 +1,195 @@
+{
+    "Products" : [
+      {
+        "id" : 1,
+        "title" : "OnePlus Nord CE2 Lite 5G (6GB RAM, 128GB, Blue Tide)",
+        "price" : 18199,
+        "category" : "mobiles",
+        "rating" : 4.7,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662443638/Croma%20Assets/Communication/Mobiles/Images/251802_on6al4.png/mxw_2048,f_auto",
+        "description" : "Loaded with premium features, the OnePlus Nord CE2 Lite 5G allows you to multitask or run heavy files without worrying about the operation speed."
+      },
+      {
+        "id" : 2,
+        "title" : "Nikon Z 50 21.51 MP Mirrorless Camera with Z DX 16-50 mm Single Kit",
+        "price" : 75490,
+        "category" : "cameras",
+        "rating" : 4,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1682681590/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/224440_2_cldcy9.png/mxw_2048,f_auto",
+        "description" : "The Nikon Z 50 Mirrorless Camera with Single Kit (Z DX 16-50 mm) is a compact, lightweight, and powerful mirrorless camera. It is coming with the Z DX 16-50 mm f/3.5-6.3 VR lens kit."
+      },
+      {
+        "id" : 3,
+        "title" : "GoPro Hero9 5K and 20MP 30 FPS Waterproof Action Camera with Bluetooth Connectivity (Black)",
+        "price" : 37490,
+        "category" : "cameras",
+        "rating" : 4.5,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1670425883/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/229091_0_te9hxy.png/mxw_2048,f_auto",
+        "description" : "Use the GoPro Hero 9 20MP Action Camera which offers you to shoot stunning 5K video that maintains serious detail even when zooming in. Also records in 4K, 2.7K, 1440 pixels and 1080 pixels."
+      },
+      {
+        "id" : 4,
+        "title" : "boAt Rockerz 410 Bluetooth Headset with Mic (Upto 10 Hours Playback, On Ear, Black)",
+        "price" : 949,
+        "category" : "headphones",
+        "rating" : 3.9,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605199949/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/8944906666014.png/mxw_2048,f_auto",
+        "description" : "The brilliant boAt Rockerz 410 Bluetooth Headset with Mic is a boon for those who imagine their life in and around music."
+      },
+      {
+        "id" : 5,
+        "title" : "Mad Catz C.A.T. 7 Wired Controller for Windows Direct/X-Input and PS3 (OLED Display, GCPCCAINBL000-0, Black)",
+        "price" : 3249,
+        "category" : "consoles",
+        "rating" : 3.4,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1650693060/Croma%20Assets/Gaming/Gaming%20Accessories/Images/251497_nqg7km.png/mxw_2048,f_auto",
+        "description" : "If you are looking for the best Gaming Controller then you buy Mad Catz C.A.T. 7 Wired Controller for Windows Direct/X-Input and PS3."
+      },
+      {
+        "id" : 6,
+        "title" : "ASUS TUF A17 FA706ICB-HX061W AMD Ryzen 7 (17.3 inch, 8GB, 512GB, Windows 11 Home, NVIDIA GeForce RTX 3050, IPS Display, Graphite Black, 90NR0675-M005A0)",
+        "price" : 67910,
+        "category" : "laptops",
+        "rating" : 3.1,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664422282/Croma%20Assets/Computers%20Peripherals/Laptop/Images/258084_0_m8e89j.png/mxw_2048,f_auto",
+        "description" : "Boost up your computing experience as the ASUS TUF A17 FA706ICB-HX061W AMD Ryzen 7 features the latest advancements delivering efficient performance. "
+      },
+      {
+        "id" : 7,
+        "title" : "Mad Catz C.A.T. 7 Wired Controller for Windows Direct/X-Input and PS3 (OLED Display, GCPCCAINBL000-0, Black)",
+        "price" : 3249,
+        "category" : "consoles",
+        "rating" : 3.4,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1650693060/Croma%20Assets/Gaming/Gaming%20Accessories/Images/251497_nqg7km.png/mxw_2048,f_auto",
+        "description" : "If you are looking for the best Gaming Controller then you buy Mad Catz C.A.T. 7 Wired Controller for Windows Direct/X-Input and PS3."
+      },
+      {
+        "id" : 8,
+        "title" : "OnePlus Nord CE2 Lite 5G (6GB RAM, 128GB, Blue Tide)",
+        "price" : 71980,
+        "category" : "mobiles",
+        "rating" : 3.2,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1682681590/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/224440_2_cldcy9.png/mxw_2048,f_auto",
+        "description" : "The Nikon Z 50 Mirrorless Camera with Single Kit (Z DX 16-50 mm) is a compact, lightweight, and powerful mirrorless camera. It is coming with the Z DX 16-50 mm f/3.5-6.3 VR lens kit."
+      },
+      {
+        "id" : 9,
+        "title" : "GoPro Hero9 5K and 20MP 30 FPS Waterproof Action Camera with Bluetooth Connectivity (Black)",
+        "price" : 36990,
+        "category" : "cameras",
+        "rating" : 2.8,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1670425883/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/229091_0_te9hxy.png/mxw_2048,f_auto",
+        "description" : "Use the GoPro Hero 9 20MP Action Camera which offers you to shoot stunning 5K video that maintains serious detail even when zooming in. Also records in 4K, 2.7K, 1440 pixels and 1080 pixels."
+      },
+      {
+        "id" : 10,
+        "title" : "ASUS TUF A17 FA706ICB-HX061W AMD Ryzen 7 (17.3 inch, 8GB, 512GB, Windows 11 Home, NVIDIA GeForce RTX 3050, IPS Display, Graphite Black, 90NR0675-M005A0)",
+        "price" : 62690,
+        "category" : "laptops",
+        "rating" : 3.9,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664422282/Croma%20Assets/Computers%20Peripherals/Laptop/Images/258084_0_m8e89j.png/mxw_2048,f_auto",
+        "description" : "Boost up your computing experience as the ASUS TUF A17 FA706ICB-HX061W AMD Ryzen 7 features the latest advancements delivering efficient performance. "
+      },
+      {
+        "id" : 11,
+        "title" : "Nikon Z 50 21.51 MP Mirrorless Camera with Z DX 16-50 mm Single Kit",
+        "price" : 71490,
+        "category" : "cameras",
+        "rating" : 4.7,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1682681590/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/224440_2_cldcy9.png/mxw_2048,f_auto",
+        "description" : "The Nikon Z 50 Mirrorless Camera with Single Kit (Z DX 16-50 mm) is a compact, lightweight, and powerful mirrorless camera. It is coming with the Z DX 16-50 mm f/3.5-6.3 VR lens kit."
+      },
+      {
+        "id" : 12,
+        "title" : "Mad Catz C.A.T. 7 Wired Controller for Windows Direct/X-Input and PS3 (OLED Display, GCPCCAINBL000-0, Black)",
+        "price" : 3249,
+        "category" : "consoles",
+        "rating" : 3.4,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1650693060/Croma%20Assets/Gaming/Gaming%20Accessories/Images/251497_nqg7km.png/mxw_2048,f_auto",
+        "description" : "If you are looking for the best Gaming Controller then you buy Mad Catz C.A.T. 7 Wired Controller for Windows Direct/X-Input and PS3."
+      },
+      {
+        "id" : 13,
+        "title" : "GoPro Hero9 5K and 20MP 30 FPS Waterproof Action Camera with Bluetooth Connectivity (Black)",
+        "price" : 31990,
+        "category" : "cameras",
+        "rating" : 4.9,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1670425883/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/229091_0_te9hxy.png/mxw_2048,f_auto",
+        "description" : "Use the GoPro Hero 9 20MP Action Camera which offers you to shoot stunning 5K video that maintains serious detail even when zooming in. Also records in 4K, 2.7K, 1440 pixels and 1080 pixels."
+      },
+      {
+        "id" : 14,
+        "title" : "OnePlus Nord CE2 Lite 5G (6GB RAM, 128GB, Blue Tide)",
+        "price" : 11490,
+        "category" : "mobiles",
+        "rating" : 3.1,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1682681590/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/224440_2_cldcy9.png/mxw_2048,f_auto",
+        "description" : "The Nikon Z 50 Mirrorless Camera with Single Kit (Z DX 16-50 mm) is a compact, lightweight, and powerful mirrorless camera. It is coming with the Z DX 16-50 mm f/3.5-6.3 VR lens kit."
+      },
+      {
+        "id" : 15,
+        "title" : "boAt Rockerz 410 Bluetooth Headset with Mic (Upto 10 Hours Playback, On Ear, Black)",
+        "price" : 9329,
+        "category" : "headphones",
+        "rating" : 3.9,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605199949/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/8944906666014.png/mxw_2048,f_auto",
+        "description" : "The brilliant boAt Rockerz 410 Bluetooth Headset with Mic is a boon for those who imagine their life in and around music."
+      },
+      {
+        "id" : 16,
+        "title" : "ASUS TUF A17 FA706ICB-HX061W AMD Ryzen 7 (17.3 inch, 8GB, 512GB, Windows 11 Home, NVIDIA GeForce RTX 3050, IPS Display, Graphite Black, 90NR0675-M005A0)",
+        "price" : 67290,
+        "category" : "laptops",
+        "rating" : 3.9,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664422282/Croma%20Assets/Computers%20Peripherals/Laptop/Images/258084_0_m8e89j.png/mxw_2048,f_auto",
+        "description" : "Boost up your computing experience as the ASUS TUF A17 FA706ICB-HX061W AMD Ryzen 7 features the latest advancements delivering efficient performance. "
+      },
+      {
+        "id" : 17,
+        "title" : "GoPro Hero9 5K and 20MP 30 FPS Waterproof Action Camera with Bluetooth Connectivity (Black)",
+        "price" : 38990,
+        "category" : "cameras",
+        "rating" : 5,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1670425883/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/229091_0_te9hxy.png/mxw_2048,f_auto",
+        "description" : "Use the GoPro Hero 9 20MP Action Camera which offers you to shoot stunning 5K video that maintains serious detail even when zooming in. Also records in 4K, 2.7K, 1440 pixels and 1080 pixels."
+      },
+      {
+        "id" : 18,
+        "title" : "Mad Catz C.A.T. 7 Wired Controller for Windows Direct/X-Input and PS3 (OLED Display, GCPCCAINBL000-0, Black)",
+        "price" : 3226,
+        "category" : "consoles",
+        "rating" : 3.4,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1650693060/Croma%20Assets/Gaming/Gaming%20Accessories/Images/251497_nqg7km.png/mxw_2048,f_auto",
+        "description" : "If you are looking for the best Gaming Controller then you buy Mad Catz C.A.T. 7 Wired Controller for Windows Direct/X-Input and PS3."
+      },
+      {
+        "id" : 19,
+        "title" : "ASUS TUF A17 FA706ICB-HX061W AMD Ryzen 7 (17.3 inch, 8GB, 512GB, Windows 11 Home, NVIDIA GeForce RTX 3050, IPS Display, Graphite Black, 90NR0675-M005A0)",
+        "price" : 67450,
+        "category" : "laptops",
+        "rating" : 3.9,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1664422282/Croma%20Assets/Computers%20Peripherals/Laptop/Images/258084_0_m8e89j.png/mxw_2048,f_auto",
+        "description" : "Boost up your computing experience as the ASUS TUF A17 FA706ICB-HX061W AMD Ryzen 7 features the latest advancements delivering efficient performance. "
+      },
+      {
+        "id" : 20,
+        "title" : "boAt Rockerz 410 Bluetooth Headset with Mic (Upto 10 Hours Playback, On Ear, Black)",
+        "price" : 949,
+        "category" : "headphones",
+        "rating" : 3.9,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605199949/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/8944906666014.png/mxw_2048,f_auto",
+        "description" : "The brilliant boAt Rockerz 410 Bluetooth Headset with Mic is a boon for those who imagine their life in and around music."
+      },
+      {
+        "id" : 21,
+        "title" : "JBL 1000 Pro 880 Watts Sound Bar with Remote (PureVoice Dialogue Enchancement Technology, 7.1.4 Channel, Black)",
+        "price" : 165998,
+        "category" : "speaker",
+        "rating" : 5,
+        "avatar" : "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1673345768/Croma%20Assets/Entertainment/Sound%20Bars/Images/267590_r8ung8.png/mxw_2048,f_auto",
+        "description" : "Get to experience the amazing surround sound by bringing home the JBL 1000 Pro 880 Watts Sound Bar with Remote online. Movies and music have never sounded better. "
+      }
+
+    ]
+}
+
