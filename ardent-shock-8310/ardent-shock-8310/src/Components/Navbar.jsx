@@ -117,7 +117,7 @@ export const Navbar = () => {
             <MenuList>
               <MenuItem><Link to='/'>Home Page</Link></MenuItem>
               <MenuItem><Link to='/allproducts'>Products</Link></MenuItem>
-              <MenuItem><Link to='/singleproduct'>Single Products</Link></MenuItem>
+              <MenuItem><Link to='/:id'>Single Products</Link></MenuItem>
             </MenuList>
           </Menu>
           <Link>Catalog</Link>
