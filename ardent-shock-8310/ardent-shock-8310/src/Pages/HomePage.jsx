@@ -10,7 +10,6 @@ import {
   HStack,
   Heading,
   Image,
-  Link,
   LinkBox,
   SimpleGrid,
   Spacer,
@@ -32,6 +31,11 @@ import { ProductCard } from "../Components/ProductCard";
 import axios from "axios";
 import { HomeProductCard } from "../Components/HomeProductCard";
 import cart from "../Images/Icons/cart.png";
+import box from "../Images/Icons/box.png";
+import crown from "../Images/Icons/crown.png";
+import warranty from "../Images/Icons/warranty.png";
+
+import {Link} from 'react-router-dom';
 
 const initialState = {
   loading: "false",
@@ -190,7 +194,7 @@ export const HomePage = () => {
 
       {/* Product Grid  */}
 
-      <Grid
+      <SimpleGrid
         h="500px"
         w="90%"
         m="auto"
@@ -219,7 +223,7 @@ export const HomePage = () => {
             </Text>
             <HStack w="70%">
               <Button variant="solid" w="70%" bg="#F9A825" color="white">
-                Add to Cart <Image ml="5" w="12%" src={cart} />
+                <Link to="/cart">Add to Cart </Link><Image ml="5" w="12%" src={cart} />
               </Button>
               <Spacer />
               <Button variant="solid" bg="#F9A825">
@@ -256,7 +260,7 @@ export const HomePage = () => {
                 </Text>
                 <HStack w="95%">
                   <Button variant="solid" bg="#F9A825" color="white">
-                    Add to Cart <Image ml="5" w="12%" src={cart} />
+                  <Link to="/cart">Add to Cart </Link><Image ml="5" w="12%" src={cart} />
                   </Button>
                   <Spacer />
                   <Button variant="solid" bg="#F9A825">
@@ -291,7 +295,7 @@ export const HomePage = () => {
                 </Text>
                 <HStack w="95%">
                   <Button variant="solid" bg="#F9A825" color="white">
-                    Add to Cart <Image ml="5" w="12%" src={cart} />
+                  <Link to="/cart">Add to Cart </Link><Image ml="5" w="12%" src={cart} />
                   </Button>
                   <Spacer />
                   <Button variant="solid" bg="#F9A825">
@@ -302,16 +306,95 @@ export const HomePage = () => {
             </HStack>
           </Card>
         </VStack>
-      </Grid>
-
-      {/* // Passing `columns={[2, null, 3]}` and `columns={{sm: 2, md: 3}}`
-// will have the same effect. */}
-
-      <SimpleGrid columns={[2, null, 3]} spacing="40px" w='90%' m='auto' mb='50px'>
-        <Box bg="tomato" height="80px"></Box>
-        <Box bg="tomato" height="80px"></Box>
-        <Box bg="tomato" height="80px"></Box>
       </SimpleGrid>
+
+              {/* banner 1 */}
+
+      <SimpleGrid
+        columns={[1, 2, 3]}
+        spacing="40px"
+        w="90%"
+        m="auto"
+        mb="50px"
+        p='30px'
+        bg="#E3F2FD"
+        borderRadius='30px'
+      >
+        <HStack >
+          <Image src={box} w="25%" borderRadius='30px'/>
+          <Stack textAlign="start" pl="10">
+            <Heading fontSize="2xl">Free Delivery</Heading>
+            <Text>on order above ₹ 5,000</Text>
+          </Stack>
+        </HStack>
+        <HStack>
+          <Image src={crown} w="25%" borderRadius='30px'/>
+          <Stack textAlign="start" pl="10">
+            <Heading fontSize="2xl">Best Quality</Heading>
+            <Text>best quality in low price</Text>
+          </Stack>
+        </HStack>
+        <HStack>
+          <Image src={warranty} w="25%" borderRadius='30px'/>
+          <Stack textAlign="start" pl="10">
+            <Heading fontSize="2xl">1 year warranty</Heading>
+            <Text>Available warranty</Text>
+          </Stack>
+        </HStack>
+      </SimpleGrid>
+
+
+      {/* Customer Feedback  */}
+
+      <Heading textAlign='start' w='86%' m='auto'>Our Valuable Customers </Heading>
+
+      
+      <SimpleGrid
+        columns={[1, 2, 3]}
+        spacing="40px"
+        w="90%"
+        m="auto"
+        mb="50px"
+        p='30px'
+        // bg="#E3F2FD"
+        
+        borderRadius='30px'
+      >
+        <HStack  border='1px solid grey' p='25px' borderRadius='30px'>
+          <VStack>
+            <HStack>
+              <Image src='https://upload.wikimedia.org/wikipedia/en/9/98/SaitamaWikipediapage.png' w="25%" borderRadius='30px'/><Spacer/>
+              <Heading>Mr. Saitama</Heading>
+            </HStack>
+            <HStack><Text fontSize='md'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Text></HStack>
+          </VStack>
+        </HStack>
+        <HStack border='1px solid grey' p='25px' borderRadius='30px'>
+          <VStack>
+            <HStack>
+              <Image src='https://i.etsystatic.com/12269632/r/il/bdea35/3658710281/il_fullxfull.3658710281_jjmr.jpg' w="25%" borderRadius='30px'/><Spacer/>
+              <Heading>Goku The Saiyan</Heading>
+            </HStack>
+            <HStack><Text fontSize='md'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Text></HStack>
+          </VStack>
+        </HStack>
+        <HStack border='1px solid grey' p='25px' borderRadius='30px'>
+          <VStack>
+            <HStack>
+              <Image src='https://e0.pxfuel.com/wallpapers/469/440/desktop-wallpaper-luffy-monkey-d-luffy-anime-art-one-piece.jpg' w="25%" borderRadius='30px'/><Spacer/>
+              <Heading>Monkey D. Luffy</Heading>
+            </HStack>
+            <HStack><Text fontSize='md'>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</Text></HStack>
+          </VStack>
+        </HStack>
+        
+      </SimpleGrid>
+
+      {/* Banner 2 */}
+
+        
+
+
     </>
   );
 };
