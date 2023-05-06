@@ -21,6 +21,8 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  SimpleGrid,
+  Heading,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import {
@@ -42,6 +44,7 @@ import React from "react";
 
 export const Navbar = () => {
   return (
+    <>
     <Box>
       {/* Nav Bar 1 */}
 
@@ -129,6 +132,9 @@ export const Navbar = () => {
         <HStack pr='60px'><Text as='b' color='#01579B'>30 Days Free Return</Text></HStack>
       </HStack>
     </Box>
+
+    
+    </>
   );
 };
 
