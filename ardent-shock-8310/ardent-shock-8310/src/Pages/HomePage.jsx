@@ -57,15 +57,22 @@ const reducer = (state, action) => {
   }
 };
 
-export const HomePage = () => {
+export const HomePage = ({search}) => {
   let [data, setData] = useState(0);
   let [page, setpage] = useState(1);
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const getAxios = (page) => {
+  const getAxios = (page,search) => {
+    let URL = ``;
+    if(search){
+      URL = `https://backend-masaiverse.onrender.com/Products?q=${search}`
+    }
+    else{
+      URL = `https://backend-masaiverse.onrender.com/Products`
+    }
     return axios({
       method: "get",
-      url: `https://backend-masaiverse.onrender.com/Products`,
+      url: URL,
       params: {
         _limit: 8,
         _page: page,
@@ -73,8 +80,8 @@ export const HomePage = () => {
     });
   };
 
-  const getData = (page) => {
-    getAxios(page).then((res) => {
+  const getData = (page,search) => {
+    getAxios(page,search).then((res) => {
       // console.log(res.data)
       dispatch({ type: "success", payload: res.data });
     });
@@ -82,8 +89,8 @@ export const HomePage = () => {
 
   useEffect(() => {
     dispatch({ type: "loading" });
-    getData(page);
-  }, [page]);
+    getData(page,search);
+  }, [page,search]);
 
   const handleClick = (val) => {
     setpage(page + val);
