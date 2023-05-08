@@ -37,8 +37,29 @@
   }
 }
 
-
 #placeholderbtn::placeholder {
   color: white;
   opacity: 1;
+}
+
+input[type="radio"]#green {
+  accent-color: green;
+  border: 0px;
+  width: 100%;
+  height: 3em;
+  
+}
+input[type="radio"]#blue {
+  accent-color: rgb(44, 113, 234);
+  border: 0px;
+  width: 40%;
+  height: 3em;
+  
+}
+input[type="radio"]#black {
+  accent-color: black;
+  border: 0px;
+  width: 100%;
+  height: 3em;
+  
 }

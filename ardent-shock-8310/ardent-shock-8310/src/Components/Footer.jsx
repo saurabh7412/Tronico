@@ -95,7 +95,7 @@ export const Footer = () => {
 
             <Stack  textAlign="left" p='15px'>
               <Heading fontSize="18px" color='#01579B'>Find Product</Heading>
-              <UnorderedList pl='25px' color='#01579B'>
+              <UnorderedList pl='25px' color='#01579B' spacing={2}>
                 <ListItem>Brownze Arnoid</ListItem>
                 <ListItem>Chronograph Blue</ListItem>
                 <ListItem>Smart Phones</ListItem>
@@ -103,9 +103,9 @@ export const Footer = () => {
                 <ListItem>Hair Straightners</ListItem>
               </UnorderedList>
             </Stack>
-            <Stack  textAlign="left" p='15px'>
+            <Stack  textAlign="left" p='15px' >
               <Heading fontSize="18px" color='#01579B'>Get Help</Heading>
-              <UnorderedList pl='25px' color='#01579B'>
+              <UnorderedList pl='25px' color='#01579B' spacing={2}>
                 <ListItem>About Us</ListItem>
                 <ListItem>Contact Us</ListItem>
                 <ListItem>Return Policy</ListItem>
@@ -115,7 +115,7 @@ export const Footer = () => {
             </Stack>
             <Stack  textAlign="left" p='15px'>
               <Heading fontSize="18px" color='#01579B'>About Us</Heading>
-              <UnorderedList pl='25px' color='#01579B'>
+              <UnorderedList pl='25px' color='#01579B' spacing={2}>
                 <ListItem>News Service</ListItem>
                 <ListItem>Service</ListItem>
                 <ListItem>Our Policy</ListItem>
