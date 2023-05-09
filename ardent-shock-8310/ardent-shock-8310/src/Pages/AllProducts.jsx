@@ -278,7 +278,7 @@ export const AllProducts = ({search}) => {
         </BreadcrumbItem>
       </Breadcrumb>
 
-      <Box w="95%" m="auto" mt="50px" border="1px solid">
+      <Box w="95%" m="auto" mt="50px">
         <HStack>
           <VStack
             w="23%"

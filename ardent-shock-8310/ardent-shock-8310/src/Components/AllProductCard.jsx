@@ -22,7 +22,7 @@ export const AllProductCard = ({id,title,price,category,rating,avatar,descriptio
   const handleClick = ()=>{
     console.log(id);
     axios.get(`https://backend-masaiverse.onrender.com/Products/${id}`).then((res)=>{
-      console.log(res.data);
+      // console.log(res.data);
       // setCurrData(res.data);
 
       currdata = {
@@ -35,42 +35,42 @@ export const AllProductCard = ({id,title,price,category,rating,avatar,descriptio
         description : res.data.description
       };
       // console.log(currdata);
-    })
-
-
-    axios.get(`https://backend-masaiverse.onrender.com/cartdetails`).then((res)=>{
-      // console.log(res.data);
-      // setFetchedCartData(res.data)
-      fetchedCartdata = res.data
-      console.log(fetchedCartdata);
-      console.log(currdata);
-      let filteredData = fetchedCartdata?.filter((ele)=> ele.title === currdata.title && ele.price === currdata.price)
-
-      console.log(filteredData);
-
-      if(filteredData.length === 0){
-        console.log(currdata);
-        axios.post(`https://backend-masaiverse.onrender.com/cartdetails`, currdata).then((res)=>{
-          console.log(res.data);
+      axios.get(`https://backend-masaiverse.onrender.com/cartdetails`).then((res)=>{
+        // console.log(res.data);
+        // setFetchedCartData(res.data)
+        fetchedCartdata = res.data
+        // console.log(fetchedCartdata);
+        // console.log(currdata);
+        let filteredData = fetchedCartdata?.filter((ele)=> ele.title === currdata.title && ele.price === currdata.price)
+  
+        // console.log(filteredData);
+  
+        if(filteredData.length === 0){
+          // console.log(currdata);
+          axios.post(`https://backend-masaiverse.onrender.com/cartdetails`, currdata).then((res)=>{
+            // console.log(res.data);
+            toast({
+              title: 'Yay !',
+              description: "Product Added to Cart !",
+              status: 'success',
+              duration: 3000,
+              isClosable: true,
+            })
+          })
+        }
+        else{
           toast({
-            title: 'Yay !',
-            description: "Product Added to Cart !",
+            title: 'Oops !',
+            description: "Product already exist !",
             status: 'success',
             duration: 3000,
             isClosable: true,
           })
-        })
-      }
-      else{
-        toast({
-          title: 'Oops !',
-          description: "Product already exist !",
-          status: 'success',
-          duration: 3000,
-          isClosable: true,
-        })
-      }
+        }
+      })
     })
+
+
 
 
 
