@@ -42,20 +42,19 @@ export const Cart = () => {
       .then((res) => {
         setCartData(res.data);
         localStorage.setItem("cartArray", JSON.stringify(res.data));
+
+        let sum = 0;
+
+        for (let i = 0; i < cartArray.length; i++) {
+          sum += cartArray[i].quantity * cartArray[i].price;
+        }
+        setTotalSum(sum);
       });
   }
   console.log(totalSum);
 
   useEffect(() => {
     getCartDetail();
-
-    let sum = 0;
-
-    for (let i = 0; i < cartArray.length; i++) {
-      sum += cartArray[i].quantity * cartArray[i].price;
-    }
-    setTotalSum(sum);
-    
   }, []);
 
   const handleDelete = (val) => {
@@ -67,16 +66,26 @@ export const Cart = () => {
       });
   };
 
-  const handleOrder=()=>{
-    toast({
-      title: 'Order Placed !',
-      description: "Order Placed Successfully !",
-      status: 'success',
-      duration: 3000,
-      isClosable: true,
-    })
-        navigate('/')
-  }
+  const handleOrder = () => {
+    if (cartArray.length > 0) {
+      toast({
+        title: "Order Placed !",
+        description: "Order Placed Successfully !",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+      navigate("/");
+    } else {
+      toast({
+        title: "Oops!",
+        description: "Your Cart is Empty !",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
 
   return (
     <>
@@ -122,7 +131,13 @@ export const Cart = () => {
         </Table>
       </TableContainer>
 
-      <Stack border="1px solid" w="50%" m="auto">
+      <Stack
+        p="20px"
+        border="1px solid grey"
+        borderRadius="20px"
+        w="50%"
+        m="auto"
+      >
         <Heading>Cart Total</Heading>
         <HStack w="80%" pl="100px">
           <Text fontSize="20px" fontWeight="bold">
@@ -132,9 +147,13 @@ export const Cart = () => {
           <Text fontSize="18px">{totalSum}</Text>
         </HStack>
         <HStack w="60%" pl="240px">
-          <Button bg="#1976D2" onClick={handleOrder} color='white'>Place Order</Button><Spacer/>
-          <Button bg="#F9A825"
-              color="white"><Link to='/allproducts'>Buy More </Link></Button>
+          <Button bg="#1976D2" onClick={handleOrder} color="white">
+            Place Order
+          </Button>
+          <Spacer />
+          <Button bg="#F9A825" color="white">
+            <Link to="/allproducts">Buy More </Link>
+          </Button>
         </HStack>
       </Stack>
     </>
