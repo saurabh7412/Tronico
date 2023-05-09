@@ -24,6 +24,8 @@ In this project I have tried to manipulate dom elements using REACT , styling us
 # Technology Stack Used 🌟
 * REACT
 * CHAKRA UI Library
+* react-router-dom library
+* axios library
 * HTML
 * CSS
 * JavaScript
