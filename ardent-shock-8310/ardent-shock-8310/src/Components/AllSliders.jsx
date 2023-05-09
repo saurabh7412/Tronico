@@ -21,7 +21,7 @@ const slider1 = [
   {
     title: "NIKON D3300 DSLR Camera Body with Single Lens",
     image:
-      "https://www.imaging-resource.com/PRODS/nikon-d3300/Z-d3300-beauty.JPG",
+      "https://www.ephotozine.com/articles/nikon-d3300-dslr-review-24003/images/highres-Nikon-D3300-Red-14_1391689033.jpg",
     desc: "The Nikon D3300 delivers exceptional pictures with its 24.2 megapixels, EXPEED 4 processing engine, and a variety of other features and functions.",
   },
   {

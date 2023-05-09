@@ -13,6 +13,7 @@ import {
   Radio,
   Box,
   Button,
+  useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -29,7 +30,7 @@ export const SingleProduct = () => {
   const [rev, setRev] = useState(false);
   // console.log(id);
   useEffect(() => {
-    axios.get(`http://localhost:8080/Products/${id}`).then((res) => {
+    axios.get(`https://backend-masaiverse.onrender.com/Products/${id}`).then((res) => {
       // console.log(res.data);
       setProduct(res.data);
     });
@@ -49,6 +50,86 @@ export const SingleProduct = () => {
     if(rev) setRev(false)
     else setRev(true)
   }
+
+
+
+  const [currData, setCurrData] = useState({})
+  const [fetchedCartData , setFetchedCartData] = useState([]);
+  const toast  = useToast();
+
+  let  currdata = {
+    title: '',
+    price : '',
+    category : '',
+    rating : '',
+    avatar : '',
+    description : ''
+  };
+  let fetchedCartdata = []
+
+  const handleClick = ()=>{
+    console.log(id);
+    axios.get(`https://backend-masaiverse.onrender.com/Products/${id}`).then((res)=>{
+      // console.log(res.data);
+      // setCurrData(res.data);
+
+      currdata = {
+        ...currdata,
+        title: res.data.title,
+        price : res.data.price,
+        category : res.data.category,
+        rating : res.data.rating,
+        avatar : res.data.avatar,
+        description : res.data.description
+      };
+      // console.log(currdata);
+      axios.get(`https://backend-masaiverse.onrender.com/cartdetails`).then((res)=>{
+        // console.log(res.data);
+        // setFetchedCartData(res.data)
+        fetchedCartdata = res.data
+        // console.log(fetchedCartdata);
+        // console.log(currdata);
+        let filteredData = fetchedCartdata?.filter((ele)=> ele.title === currdata.title && ele.price === currdata.price)
+  
+        // console.log(filteredData);
+  
+        if(filteredData.length === 0){
+          // console.log(currdata);
+          axios.post(`https://backend-masaiverse.onrender.com/cartdetails`, currdata).then((res)=>{
+            // console.log(res.data);
+            toast({
+              title: 'Yay !',
+              description: "Product Added to Cart !",
+              status: 'success',
+              duration: 3000,
+              isClosable: true,
+            })
+          })
+        }
+        else{
+          toast({
+            title: 'Oops !',
+            description: "Product already exist !",
+            status: 'success',
+            duration: 3000,
+            isClosable: true,
+          })
+        }
+      })
+    })
+
+
+
+
+
+  }
+
+
+
+
+
+
+
 
   return (
     <>
@@ -197,8 +278,8 @@ export const SingleProduct = () => {
               <Button onClick={() => handleQuantity(1)}>+</Button>
             </HStack>
             <HStack spacing={50}>
-              <Button bg="#F9A825" color="white" p="25px" borderRadius="13px">
-                <Link to="/cart">Add to Cart</Link>
+              <Button bg="#F9A825" color="white" p="25px" borderRadius="13px" onClick={handleClick}>
+                <Link>Add to Cart</Link>
               </Button>
               <Button bg="#F9A825" color="white" p="25px" borderRadius="13px">
                 Buy It Now
