@@ -17,9 +17,9 @@ https://drive.google.com/file/d/1CKCNhFQK-GUXYp6bTVbw2AP_xQkZ8O7E/view?usp=share
 ## Product Page
 https://drive.google.com/file/d/1XnCA7KMdQozIFt-HP05e7Yc6i_dqBxw-/view?usp=share_link
 
-This is an E-Commerce website which speciaizes in selling electronic products for all  category. The website provides 33,000 products of different types products like mobiles, laptops, cameras, etc.
+This is an E-Commerce website which speciaizes in selling electronic products for all  category. The website provides 33,000 products of different types of products like mobiles, laptops, cameras, etc.
 
-In this project I have tried to manipulate dom elements using REACT , styling using css in react and tried to make website more dynamic and responsive. With the self learning efforts and the technology stack, that I have learned till Unit-4 in the Masai School, I was able to clone the whole website with same looking & features.
+In this project I have tried to manipulate dom elements using REACT with CHAKRA UI Library, styling using css in react and tried to make website more dynamic and responsive. With the self learning efforts and the technology stack, that I have learned till Unit-4 in the Masai School, I was able to clone the whole website with same looking & features.
 
 
 # Technology Stack Used 🌟
