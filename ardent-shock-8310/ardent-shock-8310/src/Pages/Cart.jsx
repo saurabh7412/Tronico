@@ -48,7 +48,7 @@ export const Cart = () => {
         for (let i = 0; i < cartArray.length; i++) {
           sum += cartArray[i].quantity * cartArray[i].price;
         }
-        setTotalSum(sum);
+        setTotalSum( typeof sum === "number" ? sum : 0);
       });
   }
   console.log(totalSum);
@@ -67,24 +67,14 @@ export const Cart = () => {
   };
 
   const handleOrder = () => {
-    if (cartArray.length > 0) {
-      toast({
-        title: "Order Placed !",
-        description: "Order Placed Successfully !",
-        status: "success",
-        duration: 3000,
-        isClosable: true,
-      });
-      navigate("/");
-    } else {
-      toast({
-        title: "Oops!",
-        description: "Your Cart is Empty !",
-        status: "error",
-        duration: 3000,
-        isClosable: true,
-      });
-    }
+    toast({
+      title: "Order Placed !",
+      description: "Order Placed Successfully !",
+      status: "success",
+      duration: 3000,
+      isClosable: true,
+    });
+    navigate("/");
   };
 
   return (
