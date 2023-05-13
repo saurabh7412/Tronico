@@ -14,7 +14,7 @@ Cloned-Website: https://comforting-croquembouche-96cf08.netlify.app/
 ## Landing Page
 https://drive.google.com/file/d/1CKCNhFQK-GUXYp6bTVbw2AP_xQkZ8O7E/view?usp=share_link
 
-![Alt text](https://drive.google.com/file/d/1CKCNhFQK-GUXYp6bTVbw2AP_xQkZ8O7E/view)
+![Landing Page](https://drive.google.com/file/d/1CKCNhFQK-GUXYp6bTVbw2AP_xQkZ8O7E/view?usp=share_link "Landing Page")
 
 ## Product Page
 https://drive.google.com/file/d/1XnCA7KMdQozIFt-HP05e7Yc6i_dqBxw-/view?usp=share_link
