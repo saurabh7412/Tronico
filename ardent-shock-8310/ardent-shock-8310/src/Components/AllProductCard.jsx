@@ -1,83 +1,121 @@
-import React, { useState } from 'react'
-import { Button, ButtonGroup, Card, CardBody, CardFooter, Divider, HStack, Heading, Image, Spacer, Stack, Text, useToast } from "@chakra-ui/react";
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import React, { useContext, useState } from "react";
+import {
+  Button,
+  ButtonGroup,
+  Card,
+  CardBody,
+  CardFooter,
+  Divider,
+  HStack,
+  Heading,
+  Image,
+  Spacer,
+  Stack,
+  Text,
+  useToast,
+} from "@chakra-ui/react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { AuthContext } from "./AuthContextProvider";
 
-export const AllProductCard = ({id,title,price,category,rating,avatar,description}) => {
+export const AllProductCard = ({
+  id,
+  title,
+  price,
+  category,
+  rating,
+  avatar,
+  description,
+}) => {
+  const [currData, setCurrData] = useState({});
+  const [fetchedCartData, setFetchedCartData] = useState([]);
+  const { isAuth } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const toast = useToast();
 
-  const [currData, setCurrData] = useState({})
-  const [fetchedCartData , setFetchedCartData] = useState([]);
-  const toast  = useToast();
-
-  let  currdata = {
-    title: '',
-    price : '',
-    category : '',
-    rating : '',
-    avatar : '',
-    description : ''
+  let currdata = {
+    title: "",
+    price: "",
+    category: "",
+    rating: "",
+    avatar: "",
+    description: "",
   };
-  let fetchedCartdata = []
+  let fetchedCartdata = [];
 
-  const handleClick = ()=>{
+  const handleClick = () => {
     console.log(id);
-    axios.get(`https://backend-masaiverse.onrender.com/Products/${id}`).then((res)=>{
-      // console.log(res.data);
-      // setCurrData(res.data);
+    if (isAuth) {
+      axios
+        .get(`https://backend-masaiverse.onrender.com/Products/${id}`)
+        .then((res) => {
+          // console.log(res.data);
+          // setCurrData(res.data);
 
-      currdata = {
-        ...currdata,
-        title: res.data.title,
-        price : res.data.price,
-        category : res.data.category,
-        rating : res.data.rating,
-        avatar : res.data.avatar,
-        description : res.data.description
-      };
-      // console.log(currdata);
-      axios.get(`https://backend-masaiverse.onrender.com/cartdetails`).then((res)=>{
-        // console.log(res.data);
-        // setFetchedCartData(res.data)
-        fetchedCartdata = res.data
-        // console.log(fetchedCartdata);
-        // console.log(currdata);
-        let filteredData = fetchedCartdata?.filter((ele)=> ele.title === currdata.title && ele.price === currdata.price)
-  
-        // console.log(filteredData);
-  
-        if(filteredData.length === 0){
+          currdata = {
+            ...currdata,
+            title: res.data.title,
+            price: res.data.price,
+            category: res.data.category,
+            rating: res.data.rating,
+            avatar: res.data.avatar,
+            description: res.data.description,
+          };
           // console.log(currdata);
-          axios.post(`https://backend-masaiverse.onrender.com/cartdetails`, currdata).then((res)=>{
-            // console.log(res.data);
-            toast({
-              title: 'Yay !',
-              description: "Product Added to Cart !",
-              status: 'success',
-              duration: 3000,
-              isClosable: true,
-            })
-          })
-        }
-        else{
-          toast({
-            title: 'Oops !',
-            description: "Product already exist !",
-            status: 'success',
-            duration: 3000,
-            isClosable: true,
-          })
-        }
-      })
-    })
+          axios
+            .get(`https://backend-masaiverse.onrender.com/cartdetails`)
+            .then((res) => {
+              // console.log(res.data);
+              // setFetchedCartData(res.data)
+              fetchedCartdata = res.data;
+              // console.log(fetchedCartdata);
+              // console.log(currdata);
+              let filteredData = fetchedCartdata?.filter(
+                (ele) =>
+                  ele.title === currdata.title && ele.price === currdata.price
+              );
 
+              // console.log(filteredData);
 
-
-
-
-  }
-
-
-
+              if (filteredData.length === 0) {
+                // console.log(currdata);
+                axios
+                  .post(
+                    `https://backend-masaiverse.onrender.com/cartdetails`,
+                    currdata
+                  )
+                  .then((res) => {
+                    // console.log(res.data);
+                    toast({
+                      title: "Yay !",
+                      description: "Product Added to Cart !",
+                      status: "success",
+                      duration: 3000,
+                      isClosable: true,
+                    });
+                  });
+              } else {
+                toast({
+                  title: "Oops !",
+                  description: "Product already exist !",
+                  status: "success",
+                  duration: 3000,
+                  isClosable: true,
+                });
+              }
+            });
+        });
+    } else {
+      toast({
+        title: `Oops !`,
+        description: "Can't Add , Login First !",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+      navigate(`/login`);
+    }
+  };
 
   return (
     <Card maxW="sm">
@@ -87,32 +125,55 @@ export const AllProductCard = ({id,title,price,category,rating,avatar,descriptio
           alt="avatar"
           borderRadius="lg"
           boxShadow="rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px"
-          p='10px'
+          p="10px"
         />
         <Stack mt="6" spacing="3">
           <Heading size="s">{title}</Heading>
-          <Text fontSize='20px' fontWeight="bold">Category : {category}</Text>
-          <HStack w='100%' >
-            <Text fontSize='17px' bg="#01579B" p='5px 5px' borderRadius='15px' fontWeight='bold' color='white'>Price : ₹ {price} /-</Text><Spacer/>
-            <Text fontSize='18px' fontWeight='bold' color={rating >=3.5 ? "green" : "red"}>Rating : {rating}</Text>
+          <Text fontSize="20px" fontWeight="bold">
+            Category : {category}
+          </Text>
+          <HStack w="100%">
+            <Text
+              fontSize="17px"
+              bg="#01579B"
+              p="5px 5px"
+              borderRadius="15px"
+              fontWeight="bold"
+              color="white"
+            >
+              Price : ₹ {price} /-
+            </Text>
+            <Spacer />
+            <Text
+              fontSize="18px"
+              fontWeight="bold"
+              color={rating >= 3.5 ? "green" : "red"}
+            >
+              Rating : {rating}
+            </Text>
           </HStack>
         </Stack>
       </CardBody>
       <Divider />
       <CardFooter>
-        <ButtonGroup spacing="2" w='100%'>
-          <Button variant="solid" bg="#F9A825" color='white' _hover={{bg:"red",scale:'1.1'}}>
+        <ButtonGroup spacing="2" w="100%">
+          <Button
+            variant="solid"
+            bg="#F9A825"
+            color="white"
+            _hover={{ bg: "red", scale: "1.1" }}
+          >
             <Link to={`/${id}`}>More Info</Link>
-          </Button><Spacer/>
+          </Button>
+          <Spacer />
           <Button variant="ghost" colorScheme="blue" onClick={handleClick}>
-            <Link >Add to cart</Link>
+            <Link>Add to cart</Link>
           </Button>
         </ButtonGroup>
       </CardFooter>
     </Card>
-  )
-}
-
+  );
+};
 
 // {
 //   "id" : 21,
