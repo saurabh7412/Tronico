@@ -12,14 +12,12 @@ Original-Website-Images : https://www.behance.net/gallery/168850323/An-Ecommerce
 Cloned-Website: https://comforting-croquembouche-96cf08.netlify.app/
 
 ## Landing Page
-https://drive.google.com/file/d/1CKCNhFQK-GUXYp6bTVbw2AP_xQkZ8O7E/view?usp=share_link
-
-
 ![homepage](https://github.com/saurabh7412/ardent-shock-8310/assets/121215502/e61a3095-4343-4dc4-903b-c1e9b0c74945)
 
 
 ## Product Page
-https://drive.google.com/file/d/1XnCA7KMdQozIFt-HP05e7Yc6i_dqBxw-/view?usp=share_link
+![product page](https://github.com/saurabh7412/ardent-shock-8310/assets/121215502/39d04745-bf50-4bbc-8f90-e627e3708c1b)
+
 
 This is an E-Commerce website which speciaizes in selling electronic products for all  category. The website provides 33,000 products of different types of products like mobiles, laptops, cameras, etc.
 
