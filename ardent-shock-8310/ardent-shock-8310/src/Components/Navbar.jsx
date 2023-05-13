@@ -44,12 +44,12 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "./AuthContextProvider";
 
 let username = (localStorage.getItem('username'));
-console.log(username);
+// console.log(username);
 
 export const Navbar = ({ isOpen, onOpen, onClose, currUser ,setCurrUser,handleSearch}) => {
   // console.log(isOpen,onOpen,onClose);
   const {isAuth, setIsAuth} = useContext(AuthContext);
-  console.log(isAuth);
+  // console.log(isAuth);
   const navigate = useNavigate();
  
   return (
@@ -164,10 +164,7 @@ export const Navbar = ({ isOpen, onOpen, onClose, currUser ,setCurrUser,handleSe
                   <Link to="/">Home Page</Link>
                 </MenuItem>
                 <MenuItem>
-                  <Link to="/allproducts">Products</Link>
-                </MenuItem>
-                <MenuItem>
-                  <Link to="/:id">Single Products</Link>
+                  <Link to="/allproducts">All Products</Link>
                 </MenuItem>
               </MenuList>
             </Menu>
