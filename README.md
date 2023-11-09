@@ -1,4 +1,3 @@
-# ardent-shock-8310
 
 # TRONICO
 
